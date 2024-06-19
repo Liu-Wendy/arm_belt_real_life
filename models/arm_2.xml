@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+    <component id="arm_template">
+        <param name="theta1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="theta2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="theta3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="theta4" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="theta5" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="theta6" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="omega1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="omega2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="omega3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="omega4" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="omega5" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="omega6" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="x1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="x2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="x3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="r1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="r2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="r3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="v1" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="v2" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="v3" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="tc" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+
+
+        <param name="finish" type="label" local="false"/>
+        <param name="change@e1" type="label" local="false" />
+        <param name="e2" type="label" local="false" />
+        <param name="e3" type="label" local="false" />
+        <param name="change@e4" type="label" local="false" />
+        <param name="change@e5" type="label" local="false" />
+        <param name="e6" type="label" local="false" />
+        <param name="e7" type="label" local="false" />
+        <param name="change@e8" type="label" local="false" />
+        <param name="change@e9" type="label" local="false" />
+        <param name="e10" type="label" local="false"/>
+        <param name="e11" type="label" local="false"/>
+        <param name="change@e12" type="label" local="false"/>
+        <param name="change@e13" type="label" local="false"/>
+        <param name="change@e14" type="label" local="false"/>
+        <param name="change@e15" type="label" local="false"/>
+        <param name="change@e16" type="label" local="false"/>
+        <param name="change@e17" type="label" local="false"/>
+        <param name="change@e18" type="label" local="false"/>
+        <param name="e19" type="label" local="false"/>
+        <param name="e20" type="label" local="false"/>
+        <param name="e21" type="label" local="false"/>
+        <param name="e22" type="label" local="false"/>
+
+
+
+
+
+        <location id="1" name="init">
+        </location>
+
+        <location id="2" name="fp1">
+
+        </location>
+        <location id="3" name="fp2">
+
+        </location>
+        <location id="4" name="fp3">
+
+        </location>
+        <location id="5" name="lp1">
+
+        </location>
+        <location id="6" name="lp2">
+
+        </location>
+        <location id="7" name="lp3">
+
+        </location>
+        <location id="8" name="jp1">
+
+        </location>
+        <location id="9" name="jp2">
+
+        </location>
+        <location id="10" name="jp3">
+
+        </location>
+        <location id="11" name="finish">
+
+        </location>
+        <location id="12" name="zero">
+
+        </location>
+        <location id="13" name="stop">
+
+        </location>
+
+
+
+
+
+        <transition source="11" target="12">
+            <label>finish</label>
+        </transition>
+
+        <transition source="1" target="2">
+            <label>change@e1</label>
+        </transition>
+        <transition source="2" target="3">
+            <label>e2</label>
+        </transition>
+        <transition source="3" target="4">
+            <label>e3</label>
+        </transition>
+        <transition source="4" target="2">
+            <label>change@e4</label>
+        </transition>
+
+        <transition source="1" target="5">
+            <label>change@e5</label>
+        </transition>
+        <transition source="5" target="6">
+            <label>e6</label>
+        </transition>
+        <transition source="6" target="7">
+            <label>e7</label>
+        </transition>
+        <transition source="7" target="5">
+            <label>change@e8</label>
+        </transition>
+        <transition source="1" target="8">
+            <label>change@e9</label>
+        </transition>
+        <transition source="8" target="9">
+            <label>e10</label>
+        </transition>
+        <transition source="9" target="10">
+            <label>e11</label>
+        </transition>
+        <transition source="10" target="8">
+            <label>change@e12</label>
+        </transition>
+        <transition source="7" target="2">
+            <label>change@e13</label>
+        </transition>
+        <transition source="10" target="2">
+            <label>change@e14</label>
+        </transition>
+        <transition source="10" target="5">
+            <label>change@e15</label>
+        </transition>
+        <transition source="4" target="5">
+            <label>change@e16</label>
+        </transition>
+        <transition source="7" target="8">
+            <label>change@e17</label>
+        </transition>
+        <transition source="4" target="8">
+            <label>change@e18</label>
+        </transition>
+        <transition source="4" target="11">
+            <label>e19</label>
+        </transition>
+        <transition source="7" target="11">
+            <label>e20</label>
+        </transition>
+        <transition source="10" target="11">
+            <label>e21</label>
+        </transition>
+        <transition source="12" target="13">
+            <label>e22</label>
+        </transition>
+
+
+
+
+
+
+
+
+    </component>
+    <component id="belt_template">
+        <param name="time" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="upperT" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="carx" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="cary" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+        <param name="carz" type="real" local="false" d1="1" d2="1" dynamics="any"/>
+
+
+        <param name="a1" type="label" local="false" />
+        <param name="a2" type="label" local="false" />
+        <param name="finish" type="label" local="false" />
+
+        <location id="1" name="wait">
+
+        </location>
+        <location id="2" name="prepare">
+            <flow>time'=1</flow>
+            <invariant>time'=upper_t</invariant>
+        </location>
+        <location id="3" name="move">
+            <flow>carx'=1</flow>
+        </location>
+
+        <transition source="1" target="2">
+            <label>finish</label>
+        </transition>
+        <transition source="2" target="3">
+            <label>a1</label>
+        </transition>
+        <transition source="3" target="1">
+            <label>a2</label>
+        </transition>
+
+
+    </component>
+
+    <component id="system">
+        <param name="change@e1" type="label" local="false" />
+        <param name="e2" type="label" local="false" />
+        <param name="e3" type="label" local="false" />
+        <param name="change@e4" type="label" local="false" />
+        <param name="change@e5" type="label" local="false" />
+        <param name="e6" type="label" local="false" />
+        <param name="e7" type="label" local="false" />
+        <param name="change@e8" type="label" local="false" />
+        <param name="change@e9" type="label" local="false" />
+        <param name="e10" type="label" local="false" />
+        <param name="e11" type="label" local="false" />
+        <param name="change@e12" type="label" local="false" />
+        <param name="change@e13" type="label" local="false" />
+        <param name="change@e14" type="label" local="false" />
+        <param name="change@e15" type="label" local="false" />
+        <param name="change@e16" type="label" local="false" />
+        <param name="change@e17" type="label" local="false" />
+        <param name="change@e18" type="label" local="false" />
+        <param name="e19" type="label" local="false" />
+        <param name="e20" type="label" local="false" />
+        <param name="e21" type="label" local="false" />
+        <param name="e22" type="label" local="false" />
+
+        <param name="a1" type="label" local="false" />
+        <param name="a2" type="label" local="false" />
+        <param name="finish" type="label" local="false" />
+
+        <bind component="arm_template" as="arm">
+            <map key="change@e1">change@e1</map>
+            <map key="e2">e2</map>
+            <map key="e3">e3</map>
+            <map key="change@e4">change@e4</map>
+            <map key="change@e5">change@e5</map>
+            <map key="e6">e6</map>
+            <map key="e7">e7</map>
+            <map key="change@e8">change@e8</map>
+            <map key="change@e9">change@e9</map>
+            <map key="e10">e10</map>
+            <map key="e11">e11</map>
+            <map key="change@e12">change@e12</map>
+            <map key="change@e13">change@e13</map>
+            <map key="change@e14">change@e14</map>
+            <map key="change@e15">change@e15</map>
+            <map key="change@e16">change@e16</map>
+            <map key="change@e17">change@e17</map>
+            <map key="change@e18">change@e18</map>
+            <map key="e19">e19</map>
+            <map key="e20">e20</map>
+            <map key="e21">e21</map>
+            <map key="e22">e22</map>
+            <map key="finish">finish</map>
+
+
+        </bind>
+        <bind component="belt_template" as="belt">
+            <map key="a1">a1</map>
+            <map key="a2">a2</map>
+            <map key="finish">finish</map>
+        </bind>
+    </component>
+</sspaceex>
